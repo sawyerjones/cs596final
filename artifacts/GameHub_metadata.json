@@ -1,0 +1,164 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "gameAddress",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "creator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "stake",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "move1",
+						"type": "string"
+					}
+				],
+				"name": "GameCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ticket_price",
+						"type": "uint256"
+					}
+				],
+				"name": "createLotteryGame",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_move1",
+						"type": "string"
+					}
+				],
+				"name": "createRPSGame",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gameCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "games",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "GameHub for deploying different games",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"GameHub.sol": "GameHub"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"GameHub.sol": {
+			"keccak256": "0xcdca65c576ceca330d468e1e3a992b5fad0110de49fb10fcf59ef2099e32ca88",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7ab34b4eda9f02f8521b3d4725b35b24ac3ca0f785ec3a3d9f18de13476aea1d",
+				"dweb:/ipfs/QmW1gnn9dkz5A67JaKBnDJQcaXJ6ZLrKaeGKWh6sUApzoo"
+			]
+		},
+		"Lottery.sol": {
+			"keccak256": "0x966c143318b761d7ab135b49ac6e36d01ad2916f4bdda2b4c75a1792d0b59e83",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://072ce868fa4bde49aa360cfd239129e6de20947de84bfc936ef77deef2109eb1",
+				"dweb:/ipfs/QmYQfEhEi14Bh7oe78SCUZ3oC9etYuVSYwdNPGU76FfEJU"
+			]
+		},
+		"RockPaperScissors.sol": {
+			"keccak256": "0x42551913a3dfc7c6a213e5aa7d99cf0017379c28e60b7c853e3022843c19f2b2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://af7a97da6936613eb0148f5b6db915cf0e1c7970066f2c2bbcbb19928ded13c9",
+				"dweb:/ipfs/QmcjKe1kcLa5Xhz4DxoRtQPzNqEXjM7HsSF4b7kGWeVRKp"
+			]
+		}
+	},
+	"version": 1
+}
