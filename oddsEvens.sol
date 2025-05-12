@@ -109,18 +109,17 @@ contract OddsAndEvens {
     function hashMove(uint8 _move, string memory _secret) public pure returns (bytes32) {
         return keccak256(abi.encodePacked(_move, _secret));
     }
-
-constructor(bytes32 _commitment, Role _role) payable {
+  constructor(address _player1, bytes32 _commitment, Role _role) payable {
     require(msg.value > 0, "Stake must be > 0");
     require(_role == Role.Odds || _role == Role.Evens, "Invalid role");
 
-    player1 = payable(msg.sender);
+    player1 = payable(_player1); // use passed-in address
     stake = msg.value;
     commitment = _commitment;
     player1Role = _role;
     gameStarted = true;
 
-    emit GameCommitted(msg.sender, _role, msg.value);
+    emit GameCommitted(_player1, _role, msg.value);
 }
 
 }

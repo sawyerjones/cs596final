@@ -17,7 +17,7 @@ contract GameHub {
     function createOddsAndEvensGame(bytes32 _commitment, OddsAndEvens.Role _role) external payable returns (address) {
     require(msg.value > 0, "Stake must be > 0");
 
-    OddsAndEvens game = new OddsAndEvens{value: msg.value}(_commitment, _role);
+    OddsAndEvens game = new OddsAndEvens{value: msg.value}(msg.sender, _commitment, _role);
     games.push(address(game));
     emit GameCreated(address(game), msg.sender, msg.value, "OddsAndEvens");
     return address(game);
