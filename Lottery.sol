@@ -45,11 +45,11 @@ pragma solidity ^0.8.0;
         emit TicketsPurchased(msg.sender, purchase_amount);
         // auto start if both players joined
         if (game_status) {
-            selectWinner();
+            _resolve();
         }
     }
 
-    function selectWinner() public {
+    function _resolve() public {
         // confirm both players have bought tickets
         require(address1 != address(0) && address2 != address(0), "Waiting for players");
         require(ticketAmount[address1] > 0 && ticketAmount[address2] > 0, "Both players must buy tickets");
